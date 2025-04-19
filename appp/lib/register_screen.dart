@@ -37,9 +37,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
         MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Registration failed')));
+      print('Registration error: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Registration failed: ${e.toString()}')),
+      );
     }
   }
 
