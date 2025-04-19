@@ -13,6 +13,8 @@ void main() async {
 }
 
 class MessageBoardApp extends StatelessWidget {
+  const MessageBoardApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
